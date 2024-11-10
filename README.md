@@ -2,7 +2,7 @@
 
 **DocumentAI directly in your browser!**
 
-[demo-midres-lossless.webm](https://github.com/user-attachments/assets/793d70e4-ba69-414b-9f75-9dafb20ef359)
+[demo-midres-lossless.webm](https://github.com/user-attachments/assets/50b76ed7-6da4-4126-b007-2e5bbcb16ac5)
 
 
 ## Development
