@@ -1,0 +1,33 @@
+name: Vite Github Pages Deploy
+
+on:
+  push:
+    branches: ["master", "main"]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages 
+      url: ${{ steps.deploy_to_pages.outputs.github_pages_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # - uses: oven-sh/setup-bun@v2
+      - name: Deply to Github Pages
+        uses: skywarth/vite-github-pages-deployer@master
+        id: deploy_to_pages
+        with:
+          package_manager: yarn 
+
